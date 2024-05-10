@@ -66,6 +66,7 @@ body {
     font-family: 'Visitor TT2 BRK', 'Visitor TT2 BRK', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: #FFFFFF;
 	overflow: hidden;
+	filter: blur(0.5px);
 }
 
 @font-face {

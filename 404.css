@@ -2,6 +2,7 @@ body{
 	background-color: #001988;
 	font-size: 40px;
 	text-align: center;
+	filter: blur(1px);
 	font-family: 'Signalis Test Wip 1_2', 'Visitor TT2 BRK', 'Visitor TT2 BRK', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
