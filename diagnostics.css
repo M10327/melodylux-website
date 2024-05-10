@@ -1,0 +1,107 @@
+.diag-master{
+	height: 50%;
+}
+
+.diag-bottom{
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.status-tray{
+	width: 162px;
+	display: grid;
+	grid-template-columns: 64px 64px;
+	grid-template-rows: 64px 64px 64px 64px;
+	gap: 2px 2px;
+	margin-left: 25px;
+}
+
+.status-title{
+	line-height:16px;
+	font-size:25px;
+	text-align: left;
+	text-indent: 30px;
+}
+
+.status-icon{
+	width: 61px;
+	height: 61px;
+	margin: 0px 2px 0px 2px;
+}
+
+.status-bars {
+	display: grid;
+	grid-template-columns: 30px 200px;
+	grid-template-rows: 20px 20px 20px 20px 20px;
+	gap: 0px 25px;
+	grid-auto-flow: row;
+	margin-left: 20px;
+	margin-top: 0px;
+	margin-right: 20px;
+}
+
+.status-bartext{
+	text-align: right;
+	color: #3f3f3f;
+	font-size: 35px;
+}
+
+.status-bar{
+	text-align: left;
+	color: #636363;
+	height: 5px;
+	font-size: 12px;
+	letter-spacing: -3px;
+}
+
+.hexagon {  display: grid;
+  grid-template-columns: 30px 2px 30px 400px 30px 2px 30px;
+  grid-template-rows: 30px 350px 30px;
+  grid-auto-columns: 1fr;
+  gap: 8px 8px;
+  grid-auto-flow: row;
+  margin-left: 21px;
+  margin-right: 21px;
+  margin-top: 15px;
+}
+
+.hex-boxtext{
+	background-color:cc3500; 
+	line-height:26px;
+	color: 000000;
+}
+
+.hex-image {
+  position: relative;
+  text-align: center;
+  color: #3f3f3f;
+  line-height: 15px;
+}
+
+.bottom-left {
+  position: absolute;
+  bottom: 4px;
+  left: 0px;
+  text-align: left;
+}
+
+.top-left {
+  position: absolute;
+  top: 3px;
+  left: 0px;
+  text-align: left;
+}
+
+.top-right {
+  position: absolute;
+  top: 3px;
+  right: 0px;
+  text-align: right;
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 2px;
+  right: 0px;
+  text-align: right;
+}

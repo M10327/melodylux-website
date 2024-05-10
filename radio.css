@@ -1,0 +1,97 @@
+.radio-master {
+	height: 33%;
+}
+
+.freq-center {
+	border-width: 3px;
+	border-style: dashed;
+	border-color: #3f3f3f;
+}
+
+.freq-center {
+	color: #cc3500;
+	line-height: 110px;
+	text-align: left;
+	font-size: 90px;
+	display:block;
+	line-height:11	0px;
+	font-family: 'DIN 1451 Std';
+}
+
+.freq-side {
+	text-align: center;
+	margin-top: 65px;
+	color: #3f3f3f;
+}
+
+.freq-grid {
+	display: grid;
+	grid-template-columns: 14% 68% 14%;
+	grid-template-rows: 110px;
+	grid-auto-columns: 1fr;
+	gap: 0px 8px;
+	grid-auto-flow: row;
+	margin: auto;
+	margin-bottom: 15px;
+	margin-top: 15px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.radio-master .center{
+	display: flex;
+	flex-wrap: nowrap;
+	background-color: 131313;
+}
+
+.radio-master .center .radio-tags {
+	width: 40%;
+	margin-right: 0px;
+}
+
+.radio-master .center .radio-tags .tag {
+	border-width: 2px;
+	border-style: solid;
+	border-color: #cc3500;
+	color: #cc3500;
+	line-height: 24px;
+	width: 65%;
+	margin: auto;
+	margin-left: 15px;
+	margin-bottom: 16px;
+	font-size: 100%;
+	box-shadow:inset 0px 0px 0px 1px #cc3500;
+}
+
+
+
+
+.radio-master .center .radio-visual {
+	border: 1px;
+	border-color: #cc3500;
+	line-height: 30px;
+}
+
+.radio-bottom-title {
+	background-color: #cc3500;
+	line-height: 24px;
+	color: 000000;
+	width: 90%;
+	margin: auto;
+	border-width: 3px;
+	border-style: solid;
+	border-color: #cc3500;
+}
+
+.radio-bottom {
+	background-color: #131313;
+	width: 90%;
+	margin: auto;
+	text-align: center;
+	line-height:25px;
+	font-size: 25px;
+	border-width: 3px;
+	border-style: solid;
+	border-color: #cc3500;
+	min-height: 60%;
+}

@@ -1,0 +1,61 @@
+.mem-entry{
+	background-color: #b0b0b0;
+	margin: 8px 20px 8px 20px;
+	border: 2px solid #b0b0b0;
+	border-radius: 2px 5px 2px 5px;
+	height: 25px;
+	line-height: 25px;
+	color: 000000;
+}
+
+.mem-entry:hover,
+.mem-entry:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mem-entry:hover{
+	background-color: #eaeaea
+}
+
+.mem-box{
+	background-color: #a0a0a0;
+	display: none; 
+	position: fixed; 
+	z-index: 1; 
+	margin: auto;
+	margin-left: 15px;
+	width: 665px; 
+	height: 700px; 
+	border: solid black 2px
+}
+
+.mem-header{
+	color: #000000;
+	font-size: 60;
+	border-bottom: solid black 3px;
+}
+
+.mem-text{
+	text-align: left;
+	margin: 15px 30px 15px 30px;
+	color:111111;
+	font-size: 40px;
+	line-height:30px;
+}
+
+.mem-close {
+  color: white;
+  float: right;
+  font-size: 64px;
+  font-weight: bold;
+  margin-right: 15px;
+}
+
+.mem-close:hover,
+.mem-close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
