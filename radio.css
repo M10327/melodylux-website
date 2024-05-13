@@ -50,17 +50,29 @@
 }
 
 .radio-master .center .radio-tags .tag {
-	border-width: 2px;
+	border-width: 3px;
 	border-style: solid;
 	border-color: #cc3500;
 	color: #cc3500;
-	line-height: 24px;
+	line-height: 22px;
 	width: 65%;
 	margin: auto;
 	margin-left: 15px;
 	margin-bottom: 16px;
 	font-size: 100%;
-	box-shadow:inset 0px 0px 0px 1px #cc3500;
+}
+
+.radio-master .center .radio-tags .tag-toggleable {
+	border-width: 3px;
+	border-style: solid;
+	border-color: #cc3500;
+	color: #cc3500;
+	line-height: 22px;
+	width: 65%;
+	margin: auto;
+	margin-left: 15px;
+	margin-bottom: 16px;
+	font-size: 100%;
 }
 
 

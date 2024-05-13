@@ -3,6 +3,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="stylesheet" type="text/css" href="radio.css">
+        <link rel="stylesheet" type="text/css" href="radio-visual.css">
         <link rel="stylesheet" type="text/css" href="diagnostics.css">
         <link rel="stylesheet" type="text/css" href="memory.css">
         <link rel="shortcut icon" href="favicon.ico">
@@ -15,22 +16,45 @@
 				<div class="freq-grid">
 					<div class="freq-side">FREQ</div>
 					<div class="freq-center">
-						<div style="transform: scaleX(0.8);">176.000</div>
+						<div id="frequency-number" style="transform: scaleX(0.8);">200.000</div>
 					</div>
 					<div class="freq-side">KHZ</div>
 				</div>
 				<div class="radio-master" style="height: 40%;">
 					<div class="center">
 						<div class="radio-tags">
-							<div class="tag">TUNER</div>
-							<div class="tag">WELLE</div>
+							<div class="tag-toggleable">TUNER</div>
+							<div class="tag-toggleable">WELLE</div>
 							<div class="tag" style="border-color: #3f3f3f; box-shadow: inset 0px 0px 0px 1px #3f3f3f; color: #3f3f3f;">ATT</div>
-							<div class="tag">BURST</div>
+							<div class="tag-toggleable">BURST</div>
 							<div class="tag" style="border-color: #3f3f3f; box-shadow: inset 0px 0px 0px 1px #3f3f3f; color: #3f3f3f;">TEST</div>
-							<div class="tag">SIGNAL</div>
-							<div class="tag">DATA</div>
+							<div class="tag-toggleable">SIGNAL</div>
+							<div class="tag-toggleable">DATA</div>
 						</div>
-						<img src="radio.png" style="width:65%; height:65%; margin: 0px 20px 0px -10px"></img>
+						<div class="rad-grid">
+							<div></div>
+							<img src="radio/radio-numbers.png" style="width:100%;"></img>
+							<div></div>
+							<img src="radio/left.png" class="rad-button" id="rad-button-freq-left" style="z-index: 1;"></img>
+							<img src="radio/radio-bar.png" style="width:100%; margin:auto;"></img>
+							<img src="radio/right.png" class="rad-button" id="rad-button-freq-right" style="z-index: 1;"></img>
+							<div id="rad-bars" class="rad-bars"></div>
+							<div id="radio-selectorline" style="color:#ffffff; margin-top:-60px;">|</div>
+							<div></div>
+							<div style="line-height:15px; margin-top:-85px; margin-left:18px; color:#3f3f3f;">FFT</div>
+							<div></div>
+							<div style="line-height:15px; margin-top:-84px; margin-left:-60px; color:#3f3f3f; font-size: 15px; letter-spacing: -3px">▇▇▇</div>
+							<div></div>
+							<div class="rad-buttons">
+								<img src="radio/play.png" id="rad-button-play" style="margin:auto; z-index: 1;" class="rad-button"></img>
+								<img src="radio/pause.png" id="rad-button-pause" style="margin:auto; z-index: 1;" class="rad-button"></img>
+								<img src="radio/up2.png" id="rad-button-volup" style="margin:auto; z-index: 1;" class="rad-button""></img>
+								<div id="volume" style="color:#3f3f3f; line-height:15px; margin:auto; font-size:30px;">50</div>
+								<img src="radio/down2.png" id="rad-button-voldown" style="margin:auto; z-index: 1;" class="rad-button""></img>
+								<img src="radio/circle.png" style="margin:auto;"></img>
+							</div>
+							<div></div>
+						</div>
 					</div>
 				</div>
 				<div class="radio-master" style="height: 45%;">
@@ -52,7 +76,8 @@
 					<div id="mem-header" class="mem-header">HEADER</div>
 					<div id="mem-text" class="mem-text">WORDS</div>
 				</div>
-				<div id="memBio" class="mem-entry">Expanded Bio</div>
+				<div id="memBio" class="mem-entry">About Me</div>
+				<div id="memAbt" class="mem-entry">About This Site</div>
 				<div id="memInt" class="mem-entry">Interests</div>
 				<div id="memCre" class="mem-entry">Credits</div>
 			</div>
@@ -131,5 +156,6 @@
 			<div class="box2" style="text-align: right; color: #3f3f3f; width: 40%;"><br>V.5.6.1</div>
 		</div>
 	<script src="memory.js"></script>
+	<script src="radio.js"></script>
 	</body>
 </html>
