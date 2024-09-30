@@ -105,3 +105,11 @@
   right: 0px;
   text-align: right;
 }
+
+.diagnostics-dot{
+	float:left;
+	position:fixed;
+	left:81.9%;
+	top:34%;
+	display:hidden;
+}
