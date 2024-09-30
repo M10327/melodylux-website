@@ -32,7 +32,7 @@ var animate = animationDelay;
 var audio = new Audio();
 var volume = 0.2;
 
-function updateTime() {
+function updateRadio() {
     var freq = values[current];
 	var bar = barsIndex[current];
 	var line = lineMargin[current];
@@ -48,7 +48,7 @@ function updateTime() {
     document.getElementById('rad-bars').innerHTML = bars.join("");
 	
 	
-    requestAnimationFrame(updateTime);
+    requestAnimationFrame(updateRadio);
 }
 
 function AnimateRadioBars(){
@@ -109,8 +109,9 @@ function ToggleRadioOn(){
 	}
 }
 
-window.onload = function() {
-    updateTime();
+window.addEventListener('load', RadioLoad, false); 
+function RadioLoad() {
+    updateRadio();
 	ToggleRadioOff();
 	audio.volume = volume;
 	document.getElementById('volume').innerHTML = Math.round((volume * 100));

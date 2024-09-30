@@ -14,10 +14,7 @@ function updateTime() {
     requestAnimationFrame(updateTime);
 }
 
-// Start the time updates
-window.onload = function() {
-    updateTime();
-};
+window.addEventListener('load', updateTime, false); 
 
 function dayOfWeekAsString(dayIndex) {
   return ["SUN", "MON","TUE","WED","THU","FRI","SAT"][dayIndex] || '';
