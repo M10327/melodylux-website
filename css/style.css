@@ -69,7 +69,7 @@ body {
 	height: 900px;
     margin: 8px auto;
 	margin-top: -40;
-    font-family: 'Visitor TT2 BRK', 'Visitor TT2 BRK', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Visitor TT2 BRK', 'Visitor TT2 BRK', 'Signalis Test Wip 1_2', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: #FFFFFF;
 	overflow: hidden;
 	filter: blur(0.5px);
@@ -95,6 +95,18 @@ body {
         url('../fonts/font-DINMittelschriftStd/DINMittelschriftStd.woff2') format('woff2'),
         url('../fonts/font-DINMittelschriftStd/DINMittelschriftStd.woff') format('woff'),
         url('../fonts/font-DINMittelschriftStd/DINMittelschriftStd.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Signalis Test Wip 1_2';
+    src: url('../fonts/font-signalis/SignalisTestWip1_2-Regular.eot');
+    src: url('../fonts/font-signalis/SignalisTestWip1_2-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/font-signalis/SignalisTestWip1_2-Regular.woff2') format('woff2'),
+        url('../fonts/font-signalis/SignalisTestWip1_2-Regular.woff') format('woff'),
+        url('../fonts/font-signalis/SignalisTestWip1_2-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
