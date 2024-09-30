@@ -5,7 +5,7 @@
 	border-radius: 2px 5px 2px 5px;
 	height: 25px;
 	line-height: 25px;
-	color: 000000;
+	color: #000000;
 }
 
 .mem-entry:hover,
@@ -40,7 +40,7 @@
 .mem-text{
 	text-align: left;
 	margin: 15px 30px 15px 30px;
-	color:111111;
+	color: #111111;
 	font-size: 40px;
 	line-height:30px;
 }
