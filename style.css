@@ -9,7 +9,7 @@ html {
 	flex-wrap: nowrap;
 	background-color: 131313;
 	min-height: 80%;
-	padding-top: 3%;
+	padding-top: 0%;
 }
 
 .flex-container .box {
@@ -17,7 +17,7 @@ html {
 	width: 50%;
 	margin: 10px;
 	text-align: center;
-	line-height: 75px;
+	line-height: 12px;
 	font-size: 30px;
 	border-width: 3px;
 	border-style: solid;
@@ -60,7 +60,7 @@ html {
 body {
 	background-color: #131313;
     width: 1810px;
-	height: 1000px;
+	height: 900px;
     margin: 8px auto;
 	margin-top: -40;
     font-family: 'Visitor TT2 BRK', 'Visitor TT2 BRK', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
