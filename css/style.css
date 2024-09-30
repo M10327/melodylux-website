@@ -77,12 +77,12 @@ body {
 
 @font-face {
     font-family: 'Visitor TT2 BRK';
-    src: url('font-visitor/VisitorTT2BRK.eot');
-    src: url('font-visitor/VisitorTT2BRK.eot?#iefix') format('embedded-opentype'),
-        url('font-visitor/VisitorTT2BRK.woff2') format('woff2'),
-        url('font-visitor/VisitorTT2BRK.woff') format('woff'),
-        url('font-visitor/VisitorTT2BRK.ttf') format('truetype'),
-        url('font-visitor/VisitorTT2BRK.svg#VisitorTT2BRK') format('svg');
+    src: url('../fonts/font-visitor/VisitorTT2BRK.eot');
+    src: url('../fonts/font-visitor/VisitorTT2BRK.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/font-visitor/VisitorTT2BRK.woff2') format('woff2'),
+        url('../fonts/font-visitor/VisitorTT2BRK.woff') format('woff'),
+        url('../fonts/font-visitor/VisitorTT2BRK.ttf') format('truetype'),
+        url('../fonts/font-visitor/VisitorTT2BRK.svg#VisitorTT2BRK') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -90,11 +90,11 @@ body {
 
 @font-face {
     font-family: 'DIN 1451 Std';
-    src: url('font-DINMittelschriftStd/DINMittelschriftStd.eot');
-    src: url('font-DINMittelschriftStd/DINMittelschriftStd.eot?#iefix') format('embedded-opentype'),
-        url('font-DINMittelschriftStd/DINMittelschriftStd.woff2') format('woff2'),
-        url('font-DINMittelschriftStd/DINMittelschriftStd.woff') format('woff'),
-        url('font-DINMittelschriftStd/DINMittelschriftStd.ttf') format('truetype');
+    src: url('../fonts/font-DINMittelschriftStd/DINMittelschriftStd.eot');
+    src: url('../fonts/font-DINMittelschriftStd/DINMittelschriftStd.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/font-DINMittelschriftStd/DINMittelschriftStd.woff2') format('woff2'),
+        url('../fonts/font-DINMittelschriftStd/DINMittelschriftStd.woff') format('woff'),
+        url('../fonts/font-DINMittelschriftStd/DINMittelschriftStd.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;

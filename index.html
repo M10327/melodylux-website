@@ -2,11 +2,11 @@
 <html><head>
         <title>Melody's Terminal</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <link rel="stylesheet" type="text/css" href="radio.css">
-        <link rel="stylesheet" type="text/css" href="radio-visual.css">
-        <link rel="stylesheet" type="text/css" href="diagnostics.css">
-        <link rel="stylesheet" type="text/css" href="memory.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/radio.css">
+        <link rel="stylesheet" type="text/css" href="css/radio-visual.css">
+        <link rel="stylesheet" type="text/css" href="css/diagnostics.css">
+        <link rel="stylesheet" type="text/css" href="css/memory.css">
         <link rel="shortcut icon" href="favicon.ico">
     </head>
 
@@ -34,11 +34,11 @@
 						</div>
 						<div class="rad-grid">
 							<div></div>
-							<img src="radio/radio-numbers.png" style="width:100%;"></img>
+							<img src="images/radio/radio-numbers.png" style="width:100%;"></img>
 							<div></div>
-							<img src="radio/left.png" class="rad-button-top" id="rad-button-freq-left"></img>
-							<img src="radio/radio-bar.png" style="width:100%; margin:auto;"></img>
-							<img src="radio/right.png" class="rad-button-top" id="rad-button-freq-right"></img>
+							<img src="images/radio/left.png" class="rad-button-top" id="rad-button-freq-left"></img>
+							<img src="images/radio/radio-bar.png" style="width:100%; margin:auto;"></img>
+							<img src="images/radio/right.png" class="rad-button-top" id="rad-button-freq-right"></img>
 							<div id="rad-bars" class="rad-bars"></div>
 							<div id="radio-selectorline" style="color:#ffffff; margin-top:-27px; line-height:12px;">|</div>
 							<div></div>
@@ -47,12 +47,12 @@
 							<div style="line-height:15px; margin-top:-84px; margin-left:-60px; color:#3f3f3f; font-size: 15px; letter-spacing: -3px">▇▇▇</div>
 							<div></div>
 							<div class="rad-buttons">
-								<img src="radio/play.png" id="rad-button-play" class="rad-button-bottom"></img>
-								<img src="radio/pause.png" id="rad-button-pause" class="rad-button-bottom"></img>
-								<img src="radio/up2.png" id="rad-button-volup" class="rad-button-bottom"></img>
+								<img src="images/radio/play.png" id="rad-button-play" class="rad-button-bottom"></img>
+								<img src="images/radio/pause.png" id="rad-button-pause" class="rad-button-bottom"></img>
+								<img src="images/radio/up2.png" id="rad-button-volup" class="rad-button-bottom"></img>
 								<div id="volume" style="color:#3f3f3f; line-height:15px; margin:auto; font-size:30px;">50</div>
-								<img src="radio/down2.png" id="rad-button-voldown" class="rad-button-bottom"></img>
-								<img src="radio/circle.png" style="margin:auto;"></img>
+								<img src="images/radio/down2.png" id="rad-button-voldown" class="rad-button-bottom"></img>
+								<img src="images/radio/circle.png" style="margin:auto;"></img>
 							</div>
 							<div></div>
 						</div>
@@ -97,8 +97,8 @@
 						<div style= "background-color: #cc3500;"></div>
 						<div class= "hex-boxtext" style= "writing-mode:vertical-rl;">OVERCLUSTERED</div>
 						<div class="hex-image">
-							<img id="diagnostics-dot" class="diagnostics-dot" src="dot.png"></img>
-							<img src="hexagon.png" style="max-width:100%; max-height:100%; margin: auto;"></img>
+							<img id="diagnostics-dot" class="diagnostics-dot" src="images/dot.png"></img>
+							<img src="images/hexagon.png" style="max-width:100%; max-height:100%; margin: auto;"></img>
 							<div class="bottom-left">SYSTEM-<br>SYCHOGRAMM</div>
 							<div class="top-left">F=2.3<br>N=7.1</div>
 							<div class="top-right">■</div>
@@ -118,18 +118,18 @@
 				</div>
 				<div class="diag-master" style="display: flex; flex-wrap: nowrap">
 					<div class="status-tray">
-						<img class="status-icon" src="status-icons/eye.png"></img>
-						<img class="status-icon" src="status-icons/plus.png"></img>
-						<img class="status-icon" src="status-icons/wave.png"></img>
-						<img class="status-icon" src="status-icons/split.png"></img>
-						<img class="status-icon" src="status-icons/hand.png"></img>
-						<img class="status-icon" src="status-icons/snowflake.png"></img>
-						<img class="status-icon" src="status-icons/person.png"></img>
-						<img class="status-icon" src="status-icons/tower.png"></img>
+						<img class="status-icon" src="images/status-icons/eye.png"></img>
+						<img class="status-icon" src="images/status-icons/plus.png"></img>
+						<img class="status-icon" src="images/status-icons/wave.png"></img>
+						<img class="status-icon" src="images/status-icons/split.png"></img>
+						<img class="status-icon" src="images/status-icons/hand.png"></img>
+						<img class="status-icon" src="images/status-icons/snowflake.png"></img>
+						<img class="status-icon" src="images/status-icons/person.png"></img>
+						<img class="status-icon" src="images/status-icons/tower.png"></img>
 					</div>
 					<div style="width:80%; height: 280px;">
 						<div class="status-title">Status</div>
-						<img src="Nominal.png" style="line-height:0px;"></img>
+						<img src="images/Nominal.png" style="line-height:0px;"></img>
 						<div style="display: flex; flex-wrap: nowrap; margin-top:25px;">
 							<div class="status-bars">
 								<div class="status-bartext">K°</div>
@@ -143,7 +143,7 @@
 								<div class="status-bartext">NP</div>
 								<div class="status-bar">■■■■■■■<font color="3f3f3f">■■■■■■■■■■■■■■■■  ■</font></div>
 							</div>
-							<img src="LSTR.png" style="width:30%; height:30%; align: right; margin-top:-10px;"></img>
+							<img src="images/LSTR.png" style="width:30%; height:30%; align: right; margin-top:-10px;"></img>
 						</div>
 					</div>
 				</div>
@@ -153,12 +153,12 @@
 			<div class="box2" style="text-align: left; color: #3f3f3f; width: 30%;">GENERATION <font color="#cc3500">5</font><br>LANDVERMESSUNGS-/<br>SCHIFF-TECHNIKER<br>REPLIKA</div>
 			<div class="box2" style="width: 40%; font-size=40px;">
 				<div id="current-time" style="font-size=40px;"></div>
-				<script src="time.js"></script>
+				<script src="js/time.js"></script>
 			</div>
 			<div class="box2" style="text-align: right; color: #3f3f3f; width: 40%;"><br>V.5.6.1</div>
 		</div>
-	<script src="memory.js"></script>
-	<script src="radio.js"></script>
-	<script src="diagnostics.js"></script>
+	<script src="js/memory.js"></script>
+	<script src="js/radio.js"></script>
+	<script src="js/diagnostics.js"></script>
 	</body>
 </html>

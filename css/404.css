@@ -17,11 +17,11 @@ body{
 
 @font-face {
     font-family: 'Signalis Test Wip 1_2';
-    src: url('font-signalis/SignalisTestWip1_2-Regular.eot');
-    src: url('font-signalis/SignalisTestWip1_2-Regular.eot?#iefix') format('embedded-opentype'),
-        url('font-signalis/SignalisTestWip1_2-Regular.woff2') format('woff2'),
-        url('font-signalis/SignalisTestWip1_2-Regular.woff') format('woff'),
-        url('font-signalis/SignalisTestWip1_2-Regular.ttf') format('truetype');
+    src: url('../fonts/font-signalis/SignalisTestWip1_2-Regular.eot');
+    src: url('../fonts/font-signalis/SignalisTestWip1_2-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/font-signalis/SignalisTestWip1_2-Regular.woff2') format('woff2'),
+        url('../fonts/font-signalis/SignalisTestWip1_2-Regular.woff') format('woff'),
+        url('../fonts/font-signalis/SignalisTestWip1_2-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
