@@ -29,9 +29,26 @@
 	margin-top: -85px;
 }
 
-.rad-button:hover,
-.rad-button:focus {
-	color: #000;
+.rad-button-top {
+	z-index: 1;
+	background-color: #cc3500;
+}
+
+.rad-button-top:hover,
+.rad-button-top:focus {
 	text-decoration: none;
-	cursor: pointer
+	cursor: pointer;
+	background-color: #e76233; 
+}
+
+.rad-button-bottom {
+	z-index: 1;
+	background-color: #3f3f3f;
+}
+
+.rad-button-bottom:hover,
+.rad-button-bottom:focus {
+	text-decoration: none;
+	cursor: pointer;
+	background-color: #6c6c6c;
 }
