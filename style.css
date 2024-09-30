@@ -56,6 +56,12 @@ html {
 	margin-bottom: 0;
 }
 
+.external-link{
+	color: #ffffff;
+}
+.external-link:hover{
+	color: #bbbbbb;
+}
 
 body {
 	background-color: #131313;
