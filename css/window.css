@@ -24,6 +24,8 @@
     line-height: 30px;
     display: flex;
     flex-wrap: nowrap;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .window .headerbox .headertext {
@@ -35,6 +37,8 @@
     margin: auto;
     margin-left: 1%;
     user-select: none;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .window .headerbox .close {
