@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html><head>
+        <title>Melody's Terminal</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/radio.css">
+        <link rel="stylesheet" type="text/css" href="css/radio-visual.css">
+        <link rel="stylesheet" type="text/css" href="css/diagnostics.css">
+        <link rel="stylesheet" type="text/css" href="css/memory.css">
+        <link rel="shortcut icon" href="favicon.ico">
+    </head>
+
+    <body>
+        <div class="flex-container">
+			<div class="box" style="width: 30%;">
+				<div class="title" style="width: 290px;">Reciever</div>
+				<div class="freq-grid">
+					<div class="freq-side">FREQ</div>
+					<div class="freq-center">
+						<div id="frequency-number" style="transform: scaleX(0.8);">200.000</div>
+					</div>
+					<div class="freq-side">KHZ</div>
+				</div>
+				<div class="radio-master" style="height: 40%;">
+					<div class="center">
+						<div class="radio-tags">
+							<div class="tag-toggleable">TUNER</div>
+							<div class="tag-toggleable">WELLE</div>
+							<div class="tag" style="border-color: #3f3f3f; box-shadow: inset 0px 0px 0px 1px #3f3f3f; color: #3f3f3f;">ATT</div>
+							<div class="tag-toggleable">BURST</div>
+							<div class="tag" style="border-color: #3f3f3f; box-shadow: inset 0px 0px 0px 1px #3f3f3f; color: #3f3f3f;">TEST</div>
+							<div class="tag-toggleable">SIGNAL</div>
+							<div class="tag-toggleable">DATA</div>
+						</div>
+						<div class="rad-grid">
+							<div></div>
+							<img src="images/radio/radio-numbers.png" style="width:100%;"></img>
+							<div></div>
+							<img src="images/radio/left.png" class="rad-button-top" id="rad-button-freq-left"></img>
+							<img src="images/radio/radio-bar.png" style="width:100%; margin:auto;"></img>
+							<img src="images/radio/right.png" class="rad-button-top" id="rad-button-freq-right"></img>
+							<div id="rad-bars" class="rad-bars"></div>
+							<div id="radio-selectorline" style="color:#ffffff; margin-top:-27px; line-height:12px;">|</div>
+							<div></div>
+							<div style="line-height:15px; margin-top:-85px; margin-left:18px; color:#3f3f3f;">FFT</div>
+							<div></div>
+							<div style="line-height:15px; margin-top:-84px; margin-left:-60px; color:#3f3f3f; font-size: 15px; letter-spacing: -3px">▇▇▇</div>
+							<div></div>
+							<div class="rad-buttons">
+								<img src="images/radio/play.png" id="rad-button-play" class="rad-button-bottom"></img>
+								<img src="images/radio/pause.png" id="rad-button-pause" class="rad-button-bottom"></img>
+								<img src="images/radio/up2.png" id="rad-button-volup" class="rad-button-bottom"></img>
+								<div id="volume" style="color:#3f3f3f; line-height:15px; margin:auto; font-size:30px;">50</div>
+								<img src="images/radio/down2.png" id="rad-button-voldown" class="rad-button-bottom"></img>
+								<img src="images/radio/circle.png" style="margin:auto;"></img>
+							</div>
+							<div></div>
+						</div>
+					</div>
+				</div>
+				<div class="radio-master" style="height: 45%;">
+					<div class="radio-bottom-title">EXTERNAL LINKS</div>
+					<div class="radio-bottom">
+						<a class="external-link" href="https://discord.gg/NSt37K7">DISCORD SERVER</a>
+						<br><a class="external-link" href="https://steamcommunity.com/id/melodylux/">STEAM</a>
+						<br><a class="external-link" href="https://melodylux.tumblr.com/">TUMBLR</a>
+						<br><a class="external-link" href="https://github.com/M10327">GITHUB</a>
+						<br><a class="external-link" href="https://www.silverportreborn.com/">SILVERPORT</a>
+					</div>
+				</div>
+				<div class="radio-master"></div>
+			</div>
+			<div class="box">
+				<div class="title" style="width: 290px;">Memory</div>
+				<div id="mem-box" class="mem-box">
+					<span class="mem-close">X </span>
+					<div id="mem-header" class="mem-header">HEADER</div>
+					<div id="mem-text" class="mem-text">WORDS</div>
+				</div>
+				<div id="memBio" class="mem-entry">About Me</div>
+				<div id="memAbt" class="mem-entry">About This Site</div>
+				<div id="memInt" class="mem-entry">Interests</div>
+				<div id="memCre" class="mem-entry">Credits</div>
+			</div>
+			<div class="box" style="width: 40%;">
+				<div class="title" style="width: 290px;">Diagnostics</div>
+				<div class="diag-master" style="height: 420px; margin-bottom: 25px;">
+					<div class="hexagon">
+						<div></div>
+						<div></div>
+						<div></div>
+						<div class= "hex-boxtext">HYPERSENSITIVE</div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div style= "border-width: 3px; border-style: dashed; border-color: #3f3f3f;"></div>
+						<div style= "background-color: #cc3500;"></div>
+						<div class= "hex-boxtext" style= "writing-mode:vertical-rl;">OVERCLUSTERED</div>
+						<div class="hex-image">
+							<img id="diagnostics-dot" class="diagnostics-dot" src="images/dot.png"></img>
+							<img src="images/hexagon.png" style="max-width:100%; max-height:100%; margin: auto;"></img>
+							<div class="bottom-left">SYSTEM-<br>SYCHOGRAMM</div>
+							<div class="top-left">F=2.3<br>N=7.1</div>
+							<div class="top-right">■</div>
+							<div class="bottom-right">5.6.1</div>
+						</div>
+						<div class= "hex-boxtext" style= "writing-mode:vertical-rl;">FRAGMENTED</div>
+						<div style= "background-color: #cc3500;"></div>
+						<div style= "border-width: 3px; border-style: dashed; border-color: #3f3f3f;"></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div class= "hex-boxtext">CATATONIC</div>
+						<div></div>
+						<div></div>
+						<div></div>
+					</div>
+				</div>
+				<div class="diag-master" style="display: flex; flex-wrap: nowrap">
+					<div class="status-tray">
+						<img class="status-icon" src="images/status-icons/eye.png"></img>
+						<img class="status-icon" src="images/status-icons/plus.png"></img>
+						<img class="status-icon" src="images/status-icons/wave.png"></img>
+						<img class="status-icon" src="images/status-icons/split.png"></img>
+						<img class="status-icon" src="images/status-icons/hand.png"></img>
+						<img class="status-icon" src="images/status-icons/snowflake.png"></img>
+						<img class="status-icon" src="images/status-icons/person.png"></img>
+						<img class="status-icon" src="images/status-icons/tower.png"></img>
+					</div>
+					<div style="width:80%; height: 280px;">
+						<div class="status-title">Status</div>
+						<img src="images/Nominal.png" style="line-height:0px;"></img>
+						<div style="display: flex; flex-wrap: nowrap; margin-top:25px;">
+							<div class="status-bars">
+								<div class="status-bartext">K°</div>
+								<div class="status-bar">■■■■■■<font color="3f3f3f">■■■■■■■■■■■■■■■■■  ■</font></div>
+								<div class="status-bartext">ATA</div>
+								<div class="status-bar">■■■■■■■■■■■■■■■■■■■<font color="3f3f3f">■■■■  ■</font></div>
+								<div class="status-bartext">%T</div>
+								<div class="status-bar">■■<font color="3f3f3f">■■■■■■■■■■■■■■■■■■■■■  ■</font></div>
+								<div class="status-bartext">P</div>
+								<div class="status-bar">■■■■■■■■■■■■■<font color="3f3f3f">■■■■■■■■■■  ■</font></div>
+								<div class="status-bartext">NP</div>
+								<div class="status-bar">■■■■■■■<font color="3f3f3f">■■■■■■■■■■■■■■■■  ■</font></div>
+							</div>
+							<img src="images/LSTR.png" style="width:30%; height:30%; align: right; margin-top:-10px;"></img>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="flex-container-bottom">
+			<div class="box2" style="text-align: left; color: #3f3f3f; width: 30%;">GENERATION <font color="#cc3500">5</font><br>LANDVERMESSUNGS-/<br>SCHIFF-TECHNIKER<br>REPLIKA</div>
+			<div class="box2" style="width: 40%; font-size=40px;">
+				<div id="current-time" style="font-size=40px;"></div>
+				<script src="js/time.js"></script>
+			</div>
+			<div class="box2" style="text-align: right; color: #3f3f3f; width: 40%;"><br>V.5.6.1</div>
+		</div>
+	<script src="js/memory.js"></script>
+	<script src="js/radio.js"></script>
+	<script src="js/diagnostics.js"></script>
+	</body>
+</html>

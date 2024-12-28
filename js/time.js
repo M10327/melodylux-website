@@ -1,25 +1,22 @@
 function updateTime() {
     var date = new Date();
-	var month = date.toLocaleString('default', { month: 'short' });
-	
-	var hour = date.getHours();
-	var minute = date.getMinutes();
-	var second = date.getSeconds();
+    var month = date.toLocaleString('default', { month: 'short' });
 
-    document.getElementById('current-time').innerHTML = 
-		minTwoDigits(hour) + ":" + minTwoDigits(minute) + ":" + minTwoDigits(second) + "<br>" +
-		dayOfWeekAsString(date.getDay()) + " " + month + " " + date.getDate() + " " + date.getFullYear();
+    var hour = date.getHours();
+    var minute = date.getMinutes();
+    var second = date.getSeconds();
 
-    // Call requestAnimationFrame again to keep the time updated
+    document.getElementById('current-time').innerHTML =
+        minTwoDigits(hour) + ":" + minTwoDigits(minute) + ":" + minTwoDigits(second) + "<br>" +
+        month + " " + date.getDate() + " 1999";
+
     requestAnimationFrame(updateTime);
 }
 
-window.addEventListener('load', updateTime, false); 
+window.addEventListener('load', updateTime, false);
 
-function dayOfWeekAsString(dayIndex) {
-  return ["SUN", "MON","TUE","WED","THU","FRI","SAT"][dayIndex] || '';
-}
+
 
 function minTwoDigits(n) {
-  return (n < 10 ? '0' : '') + n;
+    return (n < 10 ? '0' : '') + n;
 }

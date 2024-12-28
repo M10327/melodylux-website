@@ -1,0 +1,35 @@
+.window .folderContainer {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 90px 90px 90px 90px 90px 90px;
+    grid-template-rows: 140px 140px 140px;
+    gap: 15px 15px;
+    display: box;
+    padding: 20px;
+    overflow: auto;
+}
+
+.window .folderContainer .folderitem{
+	width: 90px;
+	height: 140px;
+}
+
+.window .folderContainer .folderitem:hover{
+	background: rgba(70, 70, 130, 0.2);
+}
+
+.window .folderContainer .folderitem .folderimage{
+	display: block;
+	width: 90px;
+	height: 90px;
+}
+
+.window .folderContainer .folderitem .foldertitle{
+	width: 90px;
+	height: 50px;
+	margin: auto;
+	text-align: center;
+	line-height: 20px;
+	font-size: 17px;
+	user-select: none;
+}

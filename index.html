@@ -1,164 +1,194 @@
 <!DOCTYPE html>
-<html><head>
-        <title>Melody's Terminal</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-        <link rel="stylesheet" type="text/css" href="css/radio.css">
-        <link rel="stylesheet" type="text/css" href="css/radio-visual.css">
-        <link rel="stylesheet" type="text/css" href="css/diagnostics.css">
-        <link rel="stylesheet" type="text/css" href="css/memory.css">
-        <link rel="shortcut icon" href="favicon.ico">
-    </head>
+<html>
 
-    <body>
-        <div class="flex-container">
-			<div class="box" style="width: 30%;">
-				<div class="title" style="width: 290px;">Reciever</div>
-				<div class="freq-grid">
-					<div class="freq-side">FREQ</div>
-					<div class="freq-center">
-						<div id="frequency-number" style="transform: scaleX(0.8);">200.000</div>
-					</div>
-					<div class="freq-side">KHZ</div>
-				</div>
-				<div class="radio-master" style="height: 40%;">
-					<div class="center">
-						<div class="radio-tags">
-							<div class="tag-toggleable">TUNER</div>
-							<div class="tag-toggleable">WELLE</div>
-							<div class="tag" style="border-color: #3f3f3f; box-shadow: inset 0px 0px 0px 1px #3f3f3f; color: #3f3f3f;">ATT</div>
-							<div class="tag-toggleable">BURST</div>
-							<div class="tag" style="border-color: #3f3f3f; box-shadow: inset 0px 0px 0px 1px #3f3f3f; color: #3f3f3f;">TEST</div>
-							<div class="tag-toggleable">SIGNAL</div>
-							<div class="tag-toggleable">DATA</div>
-						</div>
-						<div class="rad-grid">
-							<div></div>
-							<img src="images/radio/radio-numbers.png" style="width:100%;"></img>
-							<div></div>
-							<img src="images/radio/left.png" class="rad-button-top" id="rad-button-freq-left"></img>
-							<img src="images/radio/radio-bar.png" style="width:100%; margin:auto;"></img>
-							<img src="images/radio/right.png" class="rad-button-top" id="rad-button-freq-right"></img>
-							<div id="rad-bars" class="rad-bars"></div>
-							<div id="radio-selectorline" style="color:#ffffff; margin-top:-27px; line-height:12px;">|</div>
-							<div></div>
-							<div style="line-height:15px; margin-top:-85px; margin-left:18px; color:#3f3f3f;">FFT</div>
-							<div></div>
-							<div style="line-height:15px; margin-top:-84px; margin-left:-60px; color:#3f3f3f; font-size: 15px; letter-spacing: -3px">▇▇▇</div>
-							<div></div>
-							<div class="rad-buttons">
-								<img src="images/radio/play.png" id="rad-button-play" class="rad-button-bottom"></img>
-								<img src="images/radio/pause.png" id="rad-button-pause" class="rad-button-bottom"></img>
-								<img src="images/radio/up2.png" id="rad-button-volup" class="rad-button-bottom"></img>
-								<div id="volume" style="color:#3f3f3f; line-height:15px; margin:auto; font-size:30px;">50</div>
-								<img src="images/radio/down2.png" id="rad-button-voldown" class="rad-button-bottom"></img>
-								<img src="images/radio/circle.png" style="margin:auto;"></img>
-							</div>
-							<div></div>
-						</div>
-					</div>
-				</div>
-				<div class="radio-master" style="height: 45%;">
-					<div class="radio-bottom-title">EXTERNAL LINKS</div>
-					<div class="radio-bottom">
-						<a class="external-link" href="https://discord.gg/NSt37K7">DISCORD SERVER</a>
-						<br><a class="external-link" href="https://steamcommunity.com/id/melodylux/">STEAM</a>
-						<br><a class="external-link" href="https://melodylux.tumblr.com/">TUMBLR</a>
-						<br><a class="external-link" href="https://github.com/M10327">GITHUB</a>
-						<br><a class="external-link" href="https://www.silverportreborn.com/">SILVERPORT</a>
-					</div>
-				</div>
-				<div class="radio-master"></div>
-			</div>
-			<div class="box">
-				<div class="title" style="width: 290px;">Memory</div>
-				<div id="mem-box" class="mem-box">
-					<span class="mem-close">X </span>
-					<div id="mem-header" class="mem-header">HEADER</div>
-					<div id="mem-text" class="mem-text">WORDS</div>
-				</div>
-				<div id="memBio" class="mem-entry">About Me</div>
-				<div id="memAbt" class="mem-entry">About This Site</div>
-				<div id="memInt" class="mem-entry">Interests</div>
-				<div id="memCre" class="mem-entry">Credits</div>
-			</div>
-			<div class="box" style="width: 40%;">
-				<div class="title" style="width: 290px;">Diagnostics</div>
-				<div class="diag-master" style="height: 420px; margin-bottom: 25px;">
-					<div class="hexagon">
-						<div></div>
-						<div></div>
-						<div></div>
-						<div class= "hex-boxtext">HYPERSENSITIVE</div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div style= "border-width: 3px; border-style: dashed; border-color: #3f3f3f;"></div>
-						<div style= "background-color: #cc3500;"></div>
-						<div class= "hex-boxtext" style= "writing-mode:vertical-rl;">OVERCLUSTERED</div>
-						<div class="hex-image">
-							<img id="diagnostics-dot" class="diagnostics-dot" src="images/dot.png"></img>
-							<img src="images/hexagon.png" style="max-width:100%; max-height:100%; margin: auto;"></img>
-							<div class="bottom-left">SYSTEM-<br>SYCHOGRAMM</div>
-							<div class="top-left">F=2.3<br>N=7.1</div>
-							<div class="top-right">■</div>
-							<div class="bottom-right">5.6.1</div>
-						</div>
-						<div class= "hex-boxtext" style= "writing-mode:vertical-rl;">FRAGMENTED</div>
-						<div style= "background-color: #cc3500;"></div>
-						<div style= "border-width: 3px; border-style: dashed; border-color: #3f3f3f;"></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div class= "hex-boxtext">CATATONIC</div>
-						<div></div>
-						<div></div>
-						<div></div>
-					</div>
-				</div>
-				<div class="diag-master" style="display: flex; flex-wrap: nowrap">
-					<div class="status-tray">
-						<img class="status-icon" src="images/status-icons/eye.png"></img>
-						<img class="status-icon" src="images/status-icons/plus.png"></img>
-						<img class="status-icon" src="images/status-icons/wave.png"></img>
-						<img class="status-icon" src="images/status-icons/split.png"></img>
-						<img class="status-icon" src="images/status-icons/hand.png"></img>
-						<img class="status-icon" src="images/status-icons/snowflake.png"></img>
-						<img class="status-icon" src="images/status-icons/person.png"></img>
-						<img class="status-icon" src="images/status-icons/tower.png"></img>
-					</div>
-					<div style="width:80%; height: 280px;">
-						<div class="status-title">Status</div>
-						<img src="images/Nominal.png" style="line-height:0px;"></img>
-						<div style="display: flex; flex-wrap: nowrap; margin-top:25px;">
-							<div class="status-bars">
-								<div class="status-bartext">K°</div>
-								<div class="status-bar">■■■■■■<font color="3f3f3f">■■■■■■■■■■■■■■■■■  ■</font></div>
-								<div class="status-bartext">ATA</div>
-								<div class="status-bar">■■■■■■■■■■■■■■■■■■■<font color="3f3f3f">■■■■  ■</font></div>
-								<div class="status-bartext">%T</div>
-								<div class="status-bar">■■<font color="3f3f3f">■■■■■■■■■■■■■■■■■■■■■  ■</font></div>
-								<div class="status-bartext">P</div>
-								<div class="status-bar">■■■■■■■■■■■■■<font color="3f3f3f">■■■■■■■■■■  ■</font></div>
-								<div class="status-bartext">NP</div>
-								<div class="status-bar">■■■■■■■<font color="3f3f3f">■■■■■■■■■■■■■■■■  ■</font></div>
-							</div>
-							<img src="images/LSTR.png" style="width:30%; height:30%; align: right; margin-top:-10px;"></img>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="flex-container-bottom">
-			<div class="box2" style="text-align: left; color: #3f3f3f; width: 30%;">GENERATION <font color="#cc3500">5</font><br>LANDVERMESSUNGS-/<br>SCHIFF-TECHNIKER<br>REPLIKA</div>
-			<div class="box2" style="width: 40%; font-size=40px;">
-				<div id="current-time" style="font-size=40px;"></div>
-				<script src="js/time.js"></script>
-			</div>
-			<div class="box2" style="text-align: right; color: #3f3f3f; width: 40%;"><br>V.5.6.1</div>
-		</div>
-	<script src="js/memory.js"></script>
-	<script src="js/radio.js"></script>
-	<script src="js/diagnostics.js"></script>
-	</body>
+<head>
+    <title>Melody's Pom-2 PC</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/window.css">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <link rel="stylesheet" type="text/css" href="css/taskbar.css">
+    <link rel="stylesheet" type="text/css" href="css/desktopicons.css">
+    <link rel="stylesheet" type="text/css" href="css/folder.css">
+    <link rel="shortcut icon" href="favicon.ico">
+</head>
+
+<body>
+    <div class="overlay">
+        <div class="blur">
+            <div id="windowcontainer">
+                <div id="login" class="window" style="min-width:400px; min-height:350px; visibility: visible;">
+                    <div class="headerbox">
+                        <div class="headertext">Login Menu</div>
+                        <div class="close">x</div>
+                    </div>
+                    <div class="content">
+                        <div class="loginbuttons">
+                            <div id="loginbuttonspacer" style="height: 100px;"></div>
+                            <div id="loginNoMusic" class="loginbutton" onclick="Login(false)">Login w/o Music</div>
+                            <div id="loginButton" class="loginbutton" onclick="Login(true)">Login</div>
+                            <div id="loginmobile" class="loginbutton" style="visibility: hidden;">Mobile Page</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="information" class="window" style="width: 50%; height: 70%; left:25%">
+                    <div class="headerbox">
+                        <div class="headertext">Welcome User</div>
+                        <div class="close">x</div>
+                    </div>
+                    <div class="content">
+                        <p style="font-size:35px; margin: auto;">Welcome to Melody's Pom-2 PC!</p>
+                        <p style="font-size:25px; margin: auto;">Feel free to browse around.</p>
+                        <p style="font-size:35px; margin: auto;"><br>Bio:</p>
+                        <p style="font-size:25px; margin: auto; line-height:35px;">Names: Melody and Ashley<br>Pronouns:
+                            she/her and it/its<br>Even when referring to me by it/its please use feminine gendered
+                            terms. <nobr>(for example: sister > sibling)</nobr><br>I am an adult</p>
+                    </div>
+                </div>
+                <div id="aboutcomputer" class="window" style="width: 50%; height: 70%; left:30%; top: 5%">
+                    <div class="headerbox">
+                        <div class="headertext">About Computer</div>
+                        <div class="close">x</div>
+                    </div>
+                    <div class="content">
+                        <p style="font-size:25px; margin: auto; line-height:25px;">This is the third website design I've
+                            made, and the most complex one by far. I've had to learn a good amount of javascript html
+                            and css to put this together. I write everything from scratch in local files (first using
+                            notepad++ and now using vs code), so I keep everything as basic as I can. This is currently
+                            just a hobby for me, as my main coding preference is with c#.<br><br>This design was heavily
+                            inspired by Warframe 1999. The background music, login sfx, and button clicks are all taken
+                            from the game. I'm sure some icons look a little out of place, but I'm not exactly a graphic
+                            designer so I make due with what I can find online.<br><br>Hopefully it works as intended on
+                            all systems, but I'm not very good at making websites that properly scale with screens yet
+                            so I imagine it doesn't play well on mobile or weird resolutions.</p>
+                    </div>
+                </div>
+                <div id="contactsocials" class="window" style="width: 20%; height: 60%; left:79%; top: 3%">
+                    <div class="headerbox">
+                        <div class="headertext">Contact and Socials</div>
+                        <div class="close">x</div>
+                    </div>
+                    <div class="content">
+                        <p style="font-size:25px; margin: auto; line-height:35px;">Discord: @melodylux (friend requests
+                            are often turned off)
+                            <br><a href="https://discord.gg/NSt37K7">Discord Server</a>
+                            <br><a href="https://steamcommunity.com/id/melodylux/">Steam Profile</a>
+                            <br><a href="https://melodylux.tumblr.com/">Tumblr</a>
+                            <br><a href="https://github.com/M10327">Github</a>
+                            <br><a href="https://www.silverportreborn.com/">Silverport Website</a>
+                        </p>
+                    </div>
+                </div>
+                <div id="knownbugs" class="window" style="width: 40%; height: 60%; left:30%; top: 5%">
+                    <div class="headerbox">
+                        <div class="headertext">Known Bugs</div>
+                        <div class="close">x</div>
+                    </div>
+                    <div class="content">
+                        <ul>
+                            <li>Taskbar display names bug out when hovering over the bottom few pixels</li>
+                            <li>Click noise sometimes double plays, and more often when dragging a window causes your
+                                cursor to hover over the close button</li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="todolist" class="window" style="width: 40%; height: 60%; left:30%; top: 5%">
+                    <div class="headerbox">
+                        <div class="headertext">To Do</div>
+                        <div class="close">x</div>
+                    </div>
+                    <div class="content">
+                        <p style="font-size:25px; margin: auto; line-height:35px;">If you have a cool idea, I'd love to
+                            hear suggestions through discord!<br>Current Ideas:</p>
+                        <ul>
+                            <li>Cookies :D (and settings panel)</li>
+                            <li>Volume Slider</li>
+                            <li>Background options</li>
+                            <li>Desktop Pet</li>
+                            <li>Settings for CRT effect and blur</li>
+                            <li>Allow resizing windows</li>
+                            <li>Adjust windows position when opening so it doesnt perfectly overlap with another window (give it a slight offset)</li>
+                            <li>Music player (preloaded songs and allow user upload if possible, though unsure how to save those)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="videowindow" class="window" style="width: 1018px; height: 612px; left:25%">
+                    <div class="headerbox">
+                        <div class="headertext" id="videowindowheader"></div>
+                        <div class="close">x</div>
+                    </div>
+                    <div class="contentSingleVideo">
+                        <video id="videoplayer" class="contentvideo" width="1018" height="576" controls>
+                            <source id="videoplayersrc" src="" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <div id="arknightsclears" class="window" style="width: 50%; height: 70%; left:30%; top: 5%">
+                    <div class="headerbox">
+                        <div class="headertext">Arknights Clears</div>
+                        <div class="close">x</div>
+                    </div>
+                    <div class="folderContainer">
+                        <div id="ccb1" class="folderitem"
+                            onclick="OpenVideo('ccb1_clear.mp4', `Melody's Contingency Contract Pyrolysis 620 Risk Clear`)">
+                            <img class="folderimage" src="images/ccb1.png"></img>
+                            <div class="foldertitle">CCB #1 Clear</div>
+                        </div>
+                        <div id="ccb2" class="folderitem"
+                            onclick="OpenVideo('ccb2_clear.mp4', `Melody's Contingency Contract Underdawn 750 Risk Clear`)">
+                            <img class="folderimage" src="images/ccb2.png"></img>
+                            <div class="foldertitle">CCB #2 Clear</div>
+                        </div>
+                        <div id="pinchout" class="folderitem"
+                            onclick="OpenVideo('pinch_out_clear.mp4', `Melody's Pinch Out 540 Risk Clear`)">
+                            <img class="folderimage" src="images/pinch_out.png"></img>
+                            <div class="foldertitle">Pinch Out Clear</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="taskbar">
+                <div class="flex">
+                    <div id="iconTray" class="tray" style="visibility:hidden;">
+                        <div class="icon" onclick="OpenWindow('information')">
+                            <img class="iconpicture" src="images/KIMToDo.png"></img>
+                            <div class="iconname" style="margin-left: -30px">Information</div>
+                        </div>
+                        <div class="icon" onclick="OpenWindow('aboutcomputer')">
+                            <img class="iconpicture" src="images/computer.png"></img>
+                            <div class="iconname" style="margin-left: -45px">About Computer</div>
+                        </div>
+                        <div class="icon" onclick="OpenWindow('contactsocials')">
+                            <img class="iconpicture" src="images/KIMChat.png"></img>
+                            <div class="iconname" style="margin-left: -60px">Contact and Socials</div>
+                        </div>
+                    </div>
+                    <img id="toggleBGM" class="toggleBGM" src="images/volume_on.png" style="visibility:hidden;"></img>
+                    <div id="current-time" class="datetime"></div>
+                </div>
+            </div>
+            <div id="desktopcontainer" class="desktopcontainer">
+                <div class="desktopitem" onclick="OpenWindow('arknightsclears')">
+                    <img class="desktopimage" src="images/rhodes_island.png"></img>
+                    <div class="desktoptitle">Arknights Clears</div>
+                </div>
+                <div class="desktopitem" onclick="OpenWindow('knownbugs')">
+                    <img class="desktopimage" src="images/ladybug.png"></img>
+                    <div class="desktoptitle">Bugs</div>
+                </div>
+                <div class="desktopitem" onclick="OpenWindow('todolist')">
+                    <img class="desktopimage" src="images/todo.png"></img>
+                    <div class="desktoptitle">Todo List</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/drag.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/audio.js"></script>
+    <script src="js/time.js"></script>
+    <script src="js/taskbar.js"></script>
+    <script src="js/video.js"></script>
+</body>
+
 </html>

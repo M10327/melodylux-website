@@ -1,0 +1,80 @@
+.window {
+    background-color: #d1d2d1;
+    display: block;
+    position: fixed;
+    z-index: 1;
+    float: top;
+    top: 10%;
+    left: 35%;
+    margin: auto;
+    width: 30%;
+    height: 40%;
+    border: solid #353535 3px;
+    border-radius: 4px;
+    opacity: 1;
+    visibility: hidden;
+}
+
+.window .headerbox {
+    color: #000000;
+    font-size: 25px;
+    height: 30px;
+    background-color: #7c9c8c;
+    border-bottom: solid #5c6e67 3px;
+    line-height: 30px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.window .headerbox .headertext {
+    text-align: left;
+    color: #111111;
+    font-size: 80%;
+    line-height: 100%;
+    width: 95%;
+    margin: auto;
+    margin-left: 1%;
+    user-select: none;
+}
+
+.window .headerbox .close {
+    color: white;
+    float: right;
+    font-size: 20px;
+    line-height: 14px;
+    font-weight: bold;
+    margin-right: 0px;
+    background-color: #bc3737;
+    border: solid #a63131 3px;
+    border-radius: 2px;
+    width: 18px;
+    height: 18px;
+    margin: 3px 6px 6px 6px;
+    user-select: none;
+    text-align: center;
+}
+
+.window .headerbox .close:hover {
+    background-color: #D03939;
+}
+
+.window .content {
+    padding: 5px 18px 5px 18px;
+    height: 93.5%;
+    user-select: none;
+    overflow: auto;
+    scrollbar-color: #595959 #7e7e7e;
+    scrollbar-width: thin;
+}
+
+.window .contentSingleVideo {
+    height: 100%;
+    user-select: none;
+    overflow: hidden;
+}
+
+.window .content .contentvideo {
+    margin: auto;
+    height: 99%;
+    width: 100%;
+}

@@ -1,0 +1,38 @@
+.desktopcontainer {
+  display: grid; 
+  grid-auto-columns: 1fr; 
+  grid-template-columns: 90px 90px; 
+  grid-template-rows: 140px 140px; 
+  gap: 15px 15px; 
+  display: box;
+  position: fixed;
+  float: top;
+  left: 50px;
+  top: 50px;
+  visibility: hidden;
+}
+
+.desktopcontainer .desktopitem{
+	width: 90px;
+	height: 140px;
+}
+
+.desktopcontainer .desktopitem:hover{
+	background: rgba(70, 70, 130, 0.2);
+}
+
+.desktopcontainer .desktopitem .desktopimage{
+	display: block;
+	width: 90px;
+	height: 90px;
+}
+
+.desktopcontainer .desktopitem .desktoptitle{
+	width: 90px;
+	height: 50px;
+	margin: auto;
+	text-align: center;
+	line-height: 20px;
+	font-size: 17px;
+	user-select: none;
+}

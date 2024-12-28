@@ -1,121 +1,79 @@
-
-
-html {
-	 overflow-y: scroll;
-}
-
-.flex-container {
-	display: flex;
-	flex-wrap: nowrap;
-	background-color: 131313;
-	min-height: 80%;
-	padding-top: 0%;
-}
-
-.flex-container .box {
-	background-color: #131313;
-	width: 50%;
-	margin: 10px;
-	text-align: center;
-	line-height: 12px;
-	font-size: 30px;
-	border-width: 3px;
-	border-style: solid;
-	border-color: #cc3500;
-	border-top: 24px solid #cc3500;
-	min-height: 100%;
-}
-
-.flex-container .box .title {
-	background-color: #ffffff;
-	margin: 10px;
-	text-align: center;
-	line-height: 30px;
-	font-size: 40px;
-	color: #000000;
-	margin: auto;
-	margin-top: 20px;
-}
-
-.flex-container-bottom {
-    width: 1710px;
-	margin: auto;
-	margin-bottom: 0;
-	display: flex;
-	flex-wrap: nowrap;
-	background-color: 131313;
-}
-
-.flex-container-bottom .box2 {
-	background-color: #131313;
-	width: 50%;
-	text-align: center;
-	font-size: 25px;
-	line-height: 16px;
-	font: 'Visitor TT2 BRK';
-	margin-bottom: 0;
-}
-
-.external-link{
-	color: #ffffff;
-}
-.external-link:hover{
-	color: #bbbbbb;
-}
-
 body {
-	background-color: #131313;
-    width: 1810px;
-	height: 900px;
-    margin: 8px auto;
-	margin-top: -40;
-    font-family: 'Visitor TT2 BRK', 'Visitor TT2 BRK', 'Signalis Test Wip 1_2', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: #FFFFFF;
-	overflow: hidden;
-	filter: blur(0.5px);
+    margin: 0;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    background-image: url('../images/bliss.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-@font-face {
-    font-family: 'Visitor TT2 BRK';
-    src: url('../fonts/font-visitor/VisitorTT2BRK.eot');
-    src: url('../fonts/font-visitor/VisitorTT2BRK.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/font-visitor/VisitorTT2BRK.woff2') format('woff2'),
-        url('../fonts/font-visitor/VisitorTT2BRK.woff') format('woff'),
-        url('../fonts/font-visitor/VisitorTT2BRK.ttf') format('truetype'),
-        url('../fonts/font-visitor/VisitorTT2BRK.svg#VisitorTT2BRK') format('svg');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+.overlay {
+    content: "";
+    width: 100%;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    z-index: 1;
 }
 
-@font-face {
-    font-family: 'DIN 1451 Std';
-    src: url('../fonts/font-DINMittelschriftStd/DINMittelschriftStd.eot');
-    src: url('../fonts/font-DINMittelschriftStd/DINMittelschriftStd.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/font-DINMittelschriftStd/DINMittelschriftStd.woff2') format('woff2'),
-        url('../fonts/font-DINMittelschriftStd/DINMittelschriftStd.woff') format('woff'),
-        url('../fonts/font-DINMittelschriftStd/DINMittelschriftStd.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+.overlay::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/crt_transparent.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    content: "";
+    pointer-events: none;
 }
 
-@font-face {
-    font-family: 'Signalis Test Wip 1_2';
-    src: url('../fonts/font-signalis/SignalisTestWip1_2-Regular.eot');
-    src: url('../fonts/font-signalis/SignalisTestWip1_2-Regular.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/font-signalis/SignalisTestWip1_2-Regular.woff2') format('woff2'),
-        url('../fonts/font-signalis/SignalisTestWip1_2-Regular.woff') format('woff'),
-        url('../fonts/font-signalis/SignalisTestWip1_2-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+.overlay::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.2) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    z-index: 2;
+    background-size: 100% 4px, 3px 100%;
+    pointer-events: none;
 }
 
-a:link,
-a:visited,
-a:hover,
+.blur {
+    filter: blur(0.4px);
+    width: 100%;
+    height: 100%;
+}
+
+li{
+    font-size:24px;
+    margin: auto;
+    line-height:28px;
+}
+
+a:link {
+    text-decoration: none;
+    color: #4f6fda;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #4f6fda;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #4f6fda;
+}
+
 a:active {
-      text-decoration: none;
+    text-decoration: underline;
+    color: #4f6fda;
 }
-

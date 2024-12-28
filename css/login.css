@@ -1,0 +1,22 @@
+.loginbuttons {
+    display: block;
+    height: 100%;
+}
+
+.loginbuttons .loginbutton {
+    margin: auto;
+    margin-bottom: 20px;
+    background-color: #afafaf;
+    border: solid black 2px;
+    border-radius: 3px;
+    width: 350px;
+    height: 50px;
+    text-align: center;
+    font-size: 45px;
+    line-height: 100%;
+    user-select: none;
+}
+
+.loginbuttons .loginbutton:hover {
+    background-color: #a8b7b6;
+}
