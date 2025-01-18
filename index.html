@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="css/taskbar.css">
     <link rel="stylesheet" type="text/css" href="css/desktopicons.css">
     <link rel="stylesheet" type="text/css" href="css/folder.css">
+    <link rel="stylesheet" type="text/css" href="css/settings.css">
     <link rel="shortcut icon" href="favicon.ico">
 </head>
 
@@ -43,6 +44,19 @@
                         <p style="font-size:25px; margin: auto; line-height:35px;">Names: Melody and Ashley<br>Pronouns:
                             she/her and it/its<br>Even when referring to me by it/its please use feminine gendered
                             terms. <nobr>(for example: sister > sibling)</nobr><br>I am an adult</p>
+                    </div>
+                </div>
+                <div id="settingswindow" class="window" style="width: 50%; height: 70%; left:25%">
+                    <div class="headerbox">
+                        <div class="headertext">Settings</div>
+                        <div class="close">x</div>
+                    </div>
+                    <div class="content" style="font-size:35px; line-height: 70px;">
+                        <a onclick="ToggleCRT()">[Toggle CRT]</a>
+                        <div class="volumecontainer">
+                            Volume:
+                            <input id="volumeslider" type="range" min="1" max="100" value="30" class="volumeslider"></input>
+                        </div>
                     </div>
                 </div>
                 <div id="aboutcomputer" class="window" style="width: 50%; height: 70%; left:30%; top: 5%">
@@ -104,10 +118,8 @@
                             hear suggestions through discord!<br>Current Ideas:</p>
                         <ul>
                             <li>Cookies :D (and settings panel)</li>
-                            <li>Volume Slider</li>
                             <li>Background options</li>
                             <li>Desktop Pet</li>
-                            <li>Settings for CRT effect and blur</li>
                             <li>Allow resizing windows</li>
                             <li>Adjust windows position when opening so it doesnt perfectly overlap with another window (give it a slight offset)</li>
                             <li>Music player (preloaded songs and allow user upload if possible, though unsure how to save those)</li>
@@ -152,6 +164,7 @@
             </div>
             <div class="taskbar">
                 <div class="flex">
+                    <img id="settingsgear" class="toggleBGM" src="images/gear.png" style="visibility:hidden;" onclick="OpenWindow('settingswindow')"></img>
                     <div id="iconTray" class="tray" style="visibility:hidden;">
                         <div class="icon" onclick="OpenWindow('information')">
                             <img class="iconpicture" src="images/KIMToDo.png"></img>
@@ -186,6 +199,7 @@
             </div>
         </div>
     </div>
+    <script src="js/settings.js"></script>
     <script src="js/drag.js"></script>
     <script src="js/login.js"></script>
     <script src="js/audio.js"></script>

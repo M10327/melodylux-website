@@ -17,7 +17,7 @@ function dragElement(elmnt) {
     }
 
     function shuffleToTop(e) {
-        OpenWindow(elmnt.id);
+        OpenWindow(elmnt.id, false);
     }
 
     function closeWindow(e) {
@@ -30,7 +30,7 @@ function dragElement(elmnt) {
             }
         };
 
-
+        PlayRandomClose();
         (function myLoop(i) {
             setTimeout(function () {
                 elmnt.style.opacity = (i * 5) / 100;
@@ -86,7 +86,8 @@ function dragElement(elmnt) {
     }
 }
 
-function OpenWindow(key) {
+function OpenWindow(key, playsound = true) {
+    if(playsound) PlayRandomOpen();
     var windows = document.getElementsByClassName("window");
     for (var i = 0, ii = windows.length; i < ii; i++) {
         if (windows[i].style.zIndex > 0) {

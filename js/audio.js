@@ -28,6 +28,20 @@ function AdjustMusicIcon() {
 function PlayRandomClick() {
     var audio = new Audio();
     audio.src = "audio/NinetyNineMessengerHover" + Math.round(Math.random() * 5) + ".ogg";
-    audio.volume = 0.15;
+    audio.volume = globalAudio * 0.3;
+    audio.play();
+}
+
+function PlayRandomOpen() {
+    var audio = new Audio();
+    audio.src = "audio/NinetyNineMessengerWindowOpen" + Math.round(Math.random() * 1) + ".ogg";
+    audio.volume = globalAudio * 0.3;
+    audio.play();
+}
+
+function PlayRandomClose() {
+    var audio = new Audio();
+    audio.src = "audio/NinetyNineMessengerWindowClose" + Math.round(Math.random() * 1) + ".ogg";
+    audio.volume = globalAudio * 0.3;
     audio.play();
 }

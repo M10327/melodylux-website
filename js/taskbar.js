@@ -34,8 +34,5 @@ function TaskbarAudio(elmnt) {
                 if (--i) myLoop(i);   //  decrement i and call myLoop again if i > 0
             }, 1)
         })(6);
-
     }
-
-
 }
