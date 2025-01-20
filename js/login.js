@@ -1,9 +1,9 @@
 var audiologin = new Audio();
-audiologin.src = "audio/login.ogg";
+audiologin.src = "audio/warframe_pom2/login.ogg";
 audiologin.volume = globalAudio * 0.2;
 
 var audiomusic = new Audio();
-audiomusic.src = "audio/bgm.ogg";
+audiomusic.src = "audio/warframe_pom2/bgm.ogg";
 audiomusic.volume = globalAudio * 0.35;
 audiomusic.loop = true;
 
