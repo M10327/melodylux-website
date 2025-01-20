@@ -1,0 +1,73 @@
+.slotmachine-roll{
+    width:128px;
+    height:128px;
+    background: url(../images/slot-icons.png);
+    display: block;
+    background-size: cover;
+    background-position: 0px 0px;
+    
+    image-rendering: crisp-edges;
+    image-rendering: -moz-crisp-edges;          
+    image-rendering: -o-crisp-edges;            
+    image-rendering: -webkit-optimize-contrast; 
+    -ms-interpolation-mode: nearest-neighbor; 
+}
+
+.slotmachine-button{
+    width: 224px;
+    height: 80px;
+    background: url(../images/slotmachine_button.png) no-repeat;
+    display: block;
+    background-size: cover;
+
+    image-rendering: crisp-edges;
+    image-rendering: -moz-crisp-edges;          
+    image-rendering: -o-crisp-edges;            
+    image-rendering: -webkit-optimize-contrast; 
+    -ms-interpolation-mode: nearest-neighbor; 
+
+    left: 29%;
+    position: relative;
+    top: 280px;
+}
+
+.slotmachine-button:active{
+    background: url(../images/slotmachine_button_active.png) no-repeat;
+    background-size: cover;
+}
+
+.slotmachine-tray{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    top: 192px;
+}
+
+.slotmachine-container{
+    background: url(../images/slotmachine_cropped.png);
+    display: block;
+    background-size: cover;
+    background-position: 0px 0px;
+    width: 544px;
+    height: 512px;
+    position: relative;
+
+    image-rendering: crisp-edges;
+    image-rendering: -moz-crisp-edges;          
+    image-rendering: -o-crisp-edges;            
+    image-rendering: -webkit-optimize-contrast; 
+    -ms-interpolation-mode: nearest-neighbor; 
+}
+
+.slotmachine-response{
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    font-size: 45px;
+    top: -185px;
+    position: relative;
+    color: white;
+}

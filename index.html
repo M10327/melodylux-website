@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="css/desktopicons.css">
     <link rel="stylesheet" type="text/css" href="css/folder.css">
     <link rel="stylesheet" type="text/css" href="css/settings.css">
+    <link rel="stylesheet" type="text/css" href="css/slotmachine.css">
     <link rel="shortcut icon" href="favicon.ico">
 </head>
 
@@ -46,7 +47,7 @@
                             terms. <nobr>(for example: sister > sibling)</nobr><br>I am an adult</p>
                     </div>
                 </div>
-                <div id="settingswindow" class="window" style="width: 50%; height: 70%; left:25%">
+                <div id="settingswindow" class="window" style="width: 50%; height: 70%; left:26%; top:5%">
                     <div class="headerbox">
                         <div class="headertext">Settings</div>
                         <div class="close">x</div>
@@ -92,7 +93,7 @@
                         </p>
                     </div>
                 </div>
-                <div id="knownbugs" class="window" style="width: 40%; height: 60%; left:30%; top: 5%">
+                <div id="knownbugs" class="window" style="width: 40%; height: 60%; left:29%; top: 4%">
                     <div class="headerbox">
                         <div class="headertext">Known Bugs</div>
                         <div class="close">x</div>
@@ -107,7 +108,7 @@
                         </ul>
                     </div>
                 </div>
-                <div id="todolist" class="window" style="width: 40%; height: 60%; left:30%; top: 5%">
+                <div id="todolist" class="window" style="width: 40%; height: 60%; left:28%; top: 6%">
                     <div class="headerbox">
                         <div class="headertext">To Do</div>
                         <div class="close">x</div>
@@ -126,6 +127,23 @@
                         </ul>
                     </div>
                 </div>
+                <div id="slotmachine" class="window" style="width: 544px; height: 542px; left:22%; top: 6%">
+                    <div class="headerbox">
+                        <div class="headertext">Slot Machine</div>
+                        <div class="close">x</div>
+                    </div>
+                    <div class="contentfull">
+                        <div class="slotmachine-container">
+                            <div class="slotmachine-tray">
+                                <div class="slotmachine-roll"></div>
+                                <div class="slotmachine-roll"></div>
+                                <div class="slotmachine-roll"></div>
+                            </div>
+                            <div class="slotmachine-button" id="slotmachine-button"></div>
+                            <p class="slotmachine-response" id="slotmachine-response"></p>
+                        </div>
+                    </div>
+                </div>
                 <div id="videowindow" class="window" style="width: 1018px; height: 612px; left:25%">
                     <div class="headerbox">
                         <div class="headertext" id="videowindowheader"></div>
@@ -137,7 +155,7 @@
                         </video>
                     </div>
                 </div>
-                <div id="arknightsclears" class="window" style="width: 50%; height: 70%; left:30%; top: 5%">
+                <div id="arknightsclears" class="window" style="width: 50%; height: 70%; left:24%; top: 8%">
                     <div class="headerbox">
                         <div class="headertext">Arknights Clears</div>
                         <div class="close">x</div>
@@ -195,6 +213,10 @@
                     <img class="desktopimage" src="images/todo.png"></img>
                     <div class="desktoptitle">Todo List</div>
                 </div>
+                <div class="desktopitem" onclick="OpenWindow('slotmachine')">
+                    <img class="desktopimage" src="images/slotmachine_full.png"></img>
+                    <div class="desktoptitle">Lets Go Gambling!</div>
+                </div>
             </div>
         </div>
     </div>
@@ -206,6 +228,7 @@
     <script src="js/taskbar.js"></script>
     <script src="js/video.js"></script>
     <script src="js/mobilecheck.js"></script>
+    <script src="js/slotmachine.js"></script>
 </body>
 
 </html>

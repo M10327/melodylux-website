@@ -45,3 +45,10 @@ function PlayRandomClose() {
     audio.volume = globalAudio * 0.3;
     audio.play();
 }
+
+function PlayAudio(sound, volume){
+    var audio = new Audio();
+    audio.src = "audio/" + sound;
+    audio.volume = globalAudio * volume;
+    audio.play();
+}
