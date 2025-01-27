@@ -8,6 +8,8 @@ function dragElement(elmnt) {
     elmnt.getElementsByClassName("headertext")[0].onmousedown = dragMouseDown;
     elmnt.getElementsByClassName("close")[0].onmousedown = closeWindow;
     elmnt.getElementsByClassName("close")[0].onmouseover = CloseButtonAudio;
+    var shares = elmnt.getElementsByClassName("share");
+    if (shares.length >= 1) elmnt.getElementsByClassName("share")[0].onmousedown = CopyShareUrl;
     elmnt.onmousedown = shuffleToTop;
 
     function CloseButtonAudio(e) {
@@ -44,6 +46,15 @@ function dragElement(elmnt) {
 
 
 
+    }
+
+    function CopyShareUrl(e) {
+        e = e || window.event;
+        e.preventDefault();
+        var id = elmnt.id;
+        var copyText = "https://melodylux.com/?window=" + id + "&defaults=false";
+        navigator.clipboard.writeText(copyText);
+        TrayNotification("Copied window's share url to clipboard!");
     }
 
     function dragMouseDown(e) {

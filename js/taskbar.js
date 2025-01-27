@@ -36,3 +36,44 @@ function TaskbarAudio(elmnt) {
         })(6);
     }
 }
+
+var NotifPosition = 0;
+var NotifHide = 0;
+function TrayNotification(text){
+    var notif = document.getElementById("trayNotification");
+    notif.style.right = "-300px"
+    NotifPosition = -300;
+    NotifHide = 300;
+    notif.innerHTML = text;
+    AnimateNotif();
+}
+
+function AnimateNotif(){
+    console.log("animate");
+    var notif = document.getElementById("trayNotification");
+    notif.style.right = NotifPosition + "px";
+    notif.style.visibility = "visible";
+    NotifPosition += 10;
+    if (NotifPosition < 20) requestAnimationFrame(AnimateNotif);
+    else HideNotif();
+}
+
+function HideNotif(){
+    if (NotifHide > 0){
+        NotifHide--;
+        requestAnimationFrame(HideNotif);
+    }
+    else{
+        var notif = document.getElementById("trayNotification"); 
+        (function myLoop(i) {
+            setTimeout(function () {
+                notif.style.opacity = (i * 5) / 100;
+                if (i == 1) {
+                    notif.style.opacity = 1;
+                    notif.style.visibility = "hidden";
+                }
+                if (--i) myLoop(i);
+            }, 1)
+        })(19);
+    }
+}

@@ -84,3 +84,22 @@
     font-size: 18px;
     margin-top: 8px;
 }
+
+.trayNotification{
+    background-color: #7a9887;
+    width: 250px;
+    height: 100px;
+    display: block;
+    position: fixed;
+    z-index: 1;
+    float: bottom;
+    bottom: 75px;
+    right: 10px;
+    z-index: 9999;
+    border: solid #353535 3px;
+    padding: 7px 7px 7px 7px;
+    user-select: none;
+    overflow: auto;
+    font-size: 24px;
+    visibility: hidden;
+}

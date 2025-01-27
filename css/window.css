@@ -62,6 +62,27 @@
     background-color: #D03939;
 }
 
+.window .headerbox .share {
+    color: white;
+    float: right;
+    font-size: 20px;
+    line-height: 17px;
+    font-weight: bold;
+    margin-right: 0px;
+    background-color: #247ac0;
+    border: solid #1f6caa 3px;
+    border-radius: 2px;
+    width: 18px;
+    height: 18px;
+    margin: 3px 6px 6px 6px;
+    user-select: none;
+    text-align: center;
+}
+
+.window .headerbox .share:hover {
+    background-color: #318dd8;
+}
+
 .window .content {
     padding: 5px 18px 5px 18px;
     height: 93.5%;
