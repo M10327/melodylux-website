@@ -18,6 +18,7 @@ function Login(playBGM) {
     const url = new URL(window.location.toLocaleString()).searchParams;
     var urlParamWindow = url.get('window');
     var urlParamOpenDefaults = url.get("defaults");
+    var urlParamVideo = url.get("video");
     var defaults = true;
     if (urlParamOpenDefaults == false || urlParamOpenDefaults == "false") defaults = false;
     if (defaults){
@@ -36,6 +37,9 @@ function Login(playBGM) {
     
     if (urlParamWindow != null && urlParamWindow != ""){
         OpenWindow(urlParamWindow, false);
+    }
+    if (urlParamVideo != null && urlParamVideo != ""){
+        OpenVideo(urlParamVideo);
     }
 }
 

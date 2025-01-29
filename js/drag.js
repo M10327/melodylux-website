@@ -52,6 +52,12 @@ function dragElement(elmnt) {
         e = e || window.event;
         e.preventDefault();
         var id = elmnt.id;
+        if (id == "videowindow"){
+            var copyText = "https://melodylux.com/?video=" + currentVideo + "&defaults=false";
+            navigator.clipboard.writeText(copyText);
+            TrayNotification("Copied video's share url to clipboard!");
+            return;
+        }
         var copyText = "https://melodylux.com/?window=" + id + "&defaults=false";
         navigator.clipboard.writeText(copyText);
         TrayNotification("Copied window's share url to clipboard!");
