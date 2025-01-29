@@ -7,12 +7,13 @@ function dragElement(elmnt) {
     var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
     elmnt.getElementsByClassName("headertext")[0].onmousedown = dragMouseDown;
     elmnt.getElementsByClassName("close")[0].onmousedown = closeWindow;
-    elmnt.getElementsByClassName("close")[0].onmouseover = CloseButtonAudio;
+    elmnt.getElementsByClassName("close")[0].onmouseover = ButtonAudio;
     var shares = elmnt.getElementsByClassName("share");
     if (shares.length >= 1) elmnt.getElementsByClassName("share")[0].onmousedown = CopyShareUrl;
+    if (shares.length >= 1) elmnt.getElementsByClassName("share")[0].onmouseover = ButtonAudio;
     elmnt.onmousedown = shuffleToTop;
 
-    function CloseButtonAudio(e) {
+    function ButtonAudio(e) {
         e = e || window.event;
         e.preventDefault();
         PlayRandomClick();
