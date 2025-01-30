@@ -1,38 +1,16 @@
 
 var crtEnabled = true;
-const crtRule = 
-`.overlay::before {
-    content: " ";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.2) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
-    z-index: 2;
-    background-size: 100% 4px, 3px 100%;
-    pointer-events: none;
-}`;
 function ToggleCRT(){
-    for (var i = 0, ii = document.styleSheets.length; i < ii; i++) {
-        for (var k = 0, kk = document.styleSheets[i].cssRules.length; k < kk; k++) {
-            if (crtEnabled){
-                if (document.styleSheets[i].cssRules[k].selectorText === 'overlay::before' || document.styleSheets[i].cssRules[k].selectorText === '.overlay::before') {
-                    document.styleSheets[i].deleteRule(k);
-                    crtEnabled = false;
-                    setCookie("crt", crtEnabled, 60);
-                    return;
-                }   
-            }
-            else{
-                document.styleSheets[i].insertRule(crtRule);
-                crtEnabled = true;
-                setCookie("crt", crtEnabled, 60);
-                return;
-            }
-        };
-    };
+    if (crtEnabled){
+        document.documentElement.style.setProperty("--crtfilter", `rgba(0,0,0,0)`);
+        crtEnabled = false;
+        setCookie("crt", crtEnabled, 60);
+    }
+    else{
+        document.documentElement.style.setProperty("--crtfilter", `linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.2) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06))`);
+        crtEnabled = true;
+        setCookie("crt", crtEnabled, 60);
+    }   
 }
 
 var globalAudio = 0.3;
@@ -52,12 +30,16 @@ window.addEventListener('load', reloadCookies, false);
 function reloadCookies(){
     var volume = getCookie("volume");
     var crt = getCookie("crt");
+    var style = getCookie("style");
     if (volume != ""){
         document.getElementById("volumeslider").value = volume * 100;
         updateVolume();
     }
     if (crt != "" && crt == "false"){
         ToggleCRT();
+    }
+    if (style != ""){
+        SetStyle(style, false);
     }
 }
 

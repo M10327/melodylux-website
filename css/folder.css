@@ -15,7 +15,7 @@
 }
 
 .window .folderContainer .folderitem:hover{
-	background: rgba(70, 70, 130, 0.2);
+	background: var(--folderitem_hover);
 }
 
 .window .folderContainer .folderitem .folderimage{

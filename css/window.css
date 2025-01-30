@@ -1,5 +1,5 @@
 .window {
-    background-color: #d1d2d1;
+    background-color: var(--window_bg);
     display: block;
     position: fixed;
     z-index: 1;
@@ -9,7 +9,7 @@
     margin: auto;
     width: 30%;
     height: 40%;
-    border: solid #353535 3px;
+    border: solid var(--window_border) 3px;
     border-radius: 4px;
     opacity: 1;
     visibility: hidden;
@@ -19,8 +19,8 @@
     color: #000000;
     font-size: 25px;
     height: 30px;
-    background-color: #7c9c8c;
-    border-bottom: solid #5c6e67 3px;
+    background-color: var(--window_headerbg_inactive);
+    border-bottom: solid var(--window_header_divider) 3px;
     line-height: 30px;
     display: flex;
     flex-wrap: nowrap;
@@ -30,7 +30,7 @@
 
 .window .headerbox .headertext {
     text-align: left;
-    color: #111111;
+    color: var(--window_header_fontcolor);
     font-size: 80%;
     line-height: 100%;
     width: 95%;
@@ -42,14 +42,14 @@
 }
 
 .window .headerbox .close {
-    color: white;
+    color: var(--window_close_fontcolor);
     float: right;
     font-size: 20px;
     line-height: 14px;
     font-weight: bold;
     margin-right: 0px;
-    background-color: #bc3737;
-    border: solid #a63131 3px;
+    background-color: var(--window_close_bg);
+    border: solid var(--window_close_border) 3px;
     border-radius: 2px;
     width: 18px;
     height: 18px;
@@ -59,18 +59,18 @@
 }
 
 .window .headerbox .close:hover {
-    background-color: #D03939;
+    background-color: var(--window_close_bg_hover);
 }
 
 .window .headerbox .share {
-    color: white;
+    color:var(--window_share_fontcolor);
     float: right;
     font-size: 20px;
     line-height: 17px;
     font-weight: bold;
     margin-right: 0px;
-    background-color: #247ac0;
-    border: solid #1f6caa 3px;
+    background-color: var(--window_share_bg);
+    border: solid var(--window_share_border) 3px;
     border-radius: 2px;
     width: 18px;
     height: 18px;
@@ -80,7 +80,7 @@
 }
 
 .window .headerbox .share:hover {
-    background-color: #318dd8;
+    background-color: var(--window_share_bg_hover);
 }
 
 .window .content {
@@ -88,7 +88,7 @@
     height: 93.5%;
     user-select: none;
     overflow: auto;
-    scrollbar-color: #595959 #7e7e7e;
+    scrollbar-color: var(--window_scroll1) var(--window_scroll2);
     scrollbar-width: thin;
 }
 

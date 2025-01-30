@@ -107,15 +107,18 @@ function dragElement(elmnt) {
 function OpenWindow(key, playsound = true) {
     if(playsound) PlayRandomOpen();
     var windows = document.getElementsByClassName("window");
+    var style = window.getComputedStyle(document.body);
+    var active = style.getPropertyValue("--window_headerbg_active");
+    var inactive = style.getPropertyValue("--window_headerbg_inactive");
     for (var i = 0, ii = windows.length; i < ii; i++) {
         if (windows[i].style.zIndex > 0) {
             windows[i].style.zIndex = windows[i].style.zIndex - 1;
-            windows[i].getElementsByClassName("headerbox")[0].style.backgroundColor = "#9AA8A1";
+            windows[i].getElementsByClassName("headerbox")[0].style.backgroundColor = inactive;
         }
         if (windows[i].id == key) {
             document.getElementById(key).style.visibility = "visible";
             document.getElementById(key).style.zIndex = "900";
-            windows[i].getElementsByClassName("headerbox")[0].style.backgroundColor = "#7c9c8c";
+            windows[i].getElementsByClassName("headerbox")[0].style.backgroundColor = active;
         }
     };
 }

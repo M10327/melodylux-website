@@ -1,0 +1,42 @@
+:root{
+    --taskbar: #7a9887;
+    --taskbar_icontitlebg: #c9c9c9;
+    --taskbar_icontitleborder: black;
+    --taskbar_topborder: #353535;
+
+    --traynotif_bg: #7a9887;
+    --traynotif_border: #353535;
+
+    --zeldas: #4f6fda;
+
+    --loginbutton_bg: #afafaf;
+    --loginbutton_border: black;
+    --loginbutton_bg_hover: #a8b7b6;
+
+    --folderitem_hover: rgba(70, 70, 130, 0.2);
+
+    --desktopitem_hover: rgba(70, 70, 130, 0.2);
+
+    --window_bg: #d1d2d1;
+    --window_border: #353535;
+    --window_header_divider: #5c6e67;
+    --window_header_fontcolor: #111111;
+
+    --window_headerbg_inactive: #9AA8A1;
+    --window_headerbg_active: #7c9c8c;
+
+    --window_close_bg: #bc3737;
+    --window_close_border: #a63131;
+    --window_close_bg_hover: #D03939;
+    --window_close_fontcolor: white;
+
+    --window_share_bg: #247ac0;
+    --window_share_border: #1f6caa;
+    --window_share_bg_hover: #318dd8;
+    --window_share_fontcolor: white;
+
+    --window_scroll1: #595959;
+    --window_scroll2: #7e7e7e;
+
+    --background: url('../images/bliss.jpg');
+}

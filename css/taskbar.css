@@ -1,5 +1,5 @@
 .taskbar {
-    background-color: #7a9887;
+    background-color: var(--taskbar);
     width: 100%;
     height: 60px;
     display: block;
@@ -8,6 +8,7 @@
     float: bottom;
     bottom: 0%;
     z-index: 9999;
+    border-top: solid var(--taskbar_topborder) 3px;
 }
 
 .taskbar .flex {
@@ -52,8 +53,8 @@
 }
 
 .taskbar .flex .tray .icon .iconname {
-    background-color: #c9c9c9;
-    border: solid black 2px;
+    background-color: var(--taskbar_icontitlebg);
+    border: solid var(--taskbar_icontitleborder) 2px;
     border-radius: 3px;
     line-height: 18px;
     font-size: 20px;
@@ -86,7 +87,7 @@
 }
 
 .trayNotification{
-    background-color: #7a9887;
+    background-color: var(--traynotif_bg);
     width: 250px;
     height: 100px;
     display: block;
@@ -96,7 +97,7 @@
     bottom: 75px;
     right: 10px;
     z-index: 9999;
-    border: solid #353535 3px;
+    border: solid var(--traynotif_border) 3px;
     padding: 7px 7px 7px 7px;
     user-select: none;
     overflow: auto;

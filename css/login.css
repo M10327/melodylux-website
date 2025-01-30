@@ -6,8 +6,8 @@
 .loginbuttons .loginbutton {
     margin: auto;
     margin-bottom: 20px;
-    background-color: #afafaf;
-    border: solid black 2px;
+    background-color: var(--loginbutton_bg);
+    border: solid var(--loginbutton_border) 2px;
     border-radius: 3px;
     width: 350px;
     height: 50px;
@@ -18,5 +18,5 @@
 }
 
 .loginbuttons .loginbutton:hover {
-    background-color: #a8b7b6;
+    background-color: var(--loginbutton_bg_hover);
 }

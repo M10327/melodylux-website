@@ -1,0 +1,42 @@
+:root{
+    --taskbar: #f7e0fa;
+    --taskbar_icontitlebg: #c9c9c9;
+    --taskbar_icontitleborder: black;
+    --taskbar_topborder: #cdb1d1;
+
+    --traynotif_bg: #ccecfc;
+    --traynotif_border: #a1cee4;
+
+    --zeldas: #4f6fda;
+
+    --loginbutton_bg: #ebb7eb;
+    --loginbutton_border: #755ac8;
+    --loginbutton_bg_hover: #efcfef;
+
+    --folderitem_hover: rgba(70, 70, 130, 0.2);
+
+    --desktopitem_hover: rgba(70, 70, 130, 0.2);
+
+    --window_bg: #fcf0fd;
+    --window_border: #755ac8;
+    --window_header_divider: #755ac8;
+    --window_header_fontcolor: #4d21cb;
+
+    --window_headerbg_inactive: #efcfef;
+    --window_headerbg_active: #ebb7eb;
+
+    --window_close_bg: #efcfef;
+    --window_close_border: #ebb7eb;
+    --window_close_bg_hover: #e7dae7;
+    --window_close_fontcolor: #755ac8;
+
+    --window_share_bg: #efcfef;
+    --window_share_border: #ebb7eb;
+    --window_share_bg_hover: #e7dae7;
+    --window_share_fontcolor: #755ac8;
+
+    --window_scroll1: #595959;
+    --window_scroll2: #7e7e7e;
+
+    --background: url('../images/nso_bg.png');
+}
