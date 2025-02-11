@@ -52,3 +52,10 @@ function PlayAudio(sound, volume){
     audio.volume = globalAudio * volume;
     audio.play();
 }
+
+function PlayRandomCardFlip() {
+    var audio = new Audio();
+    audio.src = "audio/holocure/snd_cardflip" + Math.round(Math.random() * 2) + ".wav";
+    audio.volume = globalAudio * 0.3;
+    audio.play();
+}

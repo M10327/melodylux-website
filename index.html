@@ -14,6 +14,7 @@
     <link rel="stylesheet" type="text/css" href="css/folder.css">
     <link rel="stylesheet" type="text/css" href="css/settings.css">
     <link rel="stylesheet" type="text/css" href="css/slotmachine.css">
+    <link rel="stylesheet" type="text/css" href="css/blackjack.css">
     <link rel="shortcut icon" href="favicon.ico">
 </head>
 
@@ -124,12 +125,12 @@
                         <p style="font-size:25px; margin: auto; line-height:35px;">If you have a cool idea, I'd love to
                             hear suggestions through discord!<br>Current Ideas:</p>
                         <ul>
-                            <li>Background options</li>
                             <li>Swap music and sfx with different themes</li>
                             <li>Desktop Pet</li>
                             <li>Allow resizing windows</li>
                             <li>Adjust windows position when opening so it doesnt perfectly overlap with another window (give it a slight offset)</li>
                             <li>Music player (preloaded songs and allow user upload if possible, though unsure how to save those)</li>
+                            <li>More small games</li>
                         </ul>
                     </div>
                 </div>
@@ -148,6 +149,25 @@
                             </div>
                             <div class="slotmachine-button" id="slotmachine-button"></div>
                             <p class="slotmachine-response" id="slotmachine-response"></p>
+                        </div>
+                    </div>
+                </div>
+                <div id="blackjack" class="window" style="width: 900px; height: 600px; left:22%; top: 18%">
+                    <div class="headerbox">
+                        <div class="headertext">Blackjack</div>
+                        <div class="share">➚</div>
+                        <div class="close">x</div>
+                    </div>
+                    <div class="content">
+                        <a id="bjButtonStart" onclick="BJStart()" class="blackjack-button">[Start Game]</a>
+                        <a id="bjButtonHit" onclick="BJHit()" style="display:none;" class="blackjack-button">[Hit]</a>
+                        <a id="bjButtonSkip" onclick="BJSkip()" style="display:none;" class="blackjack-button">[Stand]</a>
+                        <p id="bjScore" class="blackjack-text">Wins: 0 Losses: 0</p>
+                        <p id="bjDealer" class="blackjack-text">Dealer: </p>
+                        <div class="blackjack-tray" id="bjDealerTray">
+                        </div>
+                        <p id="bjPlayer" class="blackjack-text">Player: </p>
+                        <div class="blackjack-tray" id="bjPlayerTray">
                         </div>
                     </div>
                 </div>
@@ -226,6 +246,10 @@
                     <img class="desktopimage" src="images/slotmachine_full.png"></img>
                     <div class="desktoptitle">Lets Go Gambling!</div>
                 </div>
+                <div class="desktopitem" onclick="OpenWindow('blackjack')">
+                    <img class="desktopimage" src="images/PlayingCards/Clubs 1_square.png"></img>
+                    <div class="desktoptitle">Blackjack</div>
+                </div>
             </div>
             <div class="trayNotification" id="trayNotification"></div>
         </div>
@@ -240,6 +264,7 @@
     <script src="js/mobilecheck.js"></script>
     <script src="js/slotmachine.js"></script>
     <script src="js/stylemanager.js"></script>
+    <script src="js/blackjack.js"></script>
 </body>
 
 </html>
